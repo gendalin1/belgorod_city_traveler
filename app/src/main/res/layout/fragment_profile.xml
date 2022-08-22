@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    >
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/main.appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="64dp"
+            >
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="parallax"
+                />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        app:layout_anchor="@id/main.appbar"
+        app:layout_anchorGravity="bottom|end"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/coordinator"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            >
+            <TextView
+                android:id = "@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/titleSize"
+                android:layout_columnSpan="2"
+                android:layout_row="0"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_row="1"
+                android:layout_marginEnd="@dimen/paging"
+                android:layout_marginStart="@dimen/paging"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row = "2"
+                android:layout_column="0"
+                android:textSize="@dimen/textSize"
+                android:text = "@string/rating"
+                />
+
+            <LinearLayout
+                android:id = "@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_row = "2"
+                android:layout_column="1"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="center">
+                <ImageView
+                    android:id = "@+id/image1"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    />
+                <ImageView
+                    android:id = "@+id/image2"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"/>
+                <ImageView
+                    android:id = "@+id/image3"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"/>
+                <ImageView
+                    android:id = "@+id/image4"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:id = "@+id/image5"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row = "3"
+                android:layout_column="0"
+                android:textSize="@dimen/textSize"
+                android:text = "@string/cash"
+                />
+
+            <TextView
+                android:id = "@+id/cash"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row = "3"
+                android:layout_column="1"
+                android:textColor="@color/red"
+                android:textSize="@dimen/textSize"
+                android:layout_gravity="fill_horizontal"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row = "4"
+                android:layout_column="0"
+                android:textSize="@dimen/textSize"
+                android:text = "@string/about_myself"
+                />
+
+            <TextView
+                android:id = "@+id/about_myselt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row = "4"
+                android:layout_column="1"
+                android:textSize="@dimen/textSize"
+                android:layout_gravity="fill_horizontal"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row = "5"
+                android:layout_column="0"
+                android:textSize="@dimen/textSize"
+                android:text = "@string/birthday"
+                />
+
+            <TextView
+                android:id = "@+id/birthday"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row = "5"
+                android:layout_column="1"
+                android:textSize="@dimen/textSize"
+                android:layout_gravity="fill"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row = "6"
+                android:layout_column="0"
+                android:textSize="@dimen/textSize"
+                android:text = "@string/city"
+                />
+
+            <TextView
+                android:id = "@+id/city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row = "6"
+                android:layout_column="1"
+                android:textSize="@dimen/textSize"
+                android:layout_gravity="fill"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row = "7"
+                android:layout_column="0"
+                android:textSize="@dimen/textSize"
+                android:text = "@string/achievements"
+                />
+
+            <TextView
+                android:id = "@+id/achievements"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row = "7"
+                android:layout_column="1"
+                android:textSize="@dimen/textSize"
+                android:layout_gravity="fill"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row = "8"
+                android:layout_column="0"
+                android:textSize="@dimen/textSize"
+                android:text = "@string/attitude_to_smoking"
+                />
+
+            <TextView
+                android:id = "@+id/attitude_to_smoking"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row = "8"
+                android:layout_column="1"
+                android:textSize="@dimen/textSize"
+                android:layout_gravity="fill"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row = "9"
+                android:layout_column="0"
+                android:textSize="@dimen/textSize"
+                android:text = "@string/attitude_to_alcohol"
+                />
+
+            <TextView
+                android:id = "@+id/attitude_to_alcohol"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row = "9"
+                android:layout_column="1"
+                android:textSize="@dimen/textSize"
+                android:layout_gravity="fill"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row = "10"
+                android:layout_column="0"
+                android:textSize="@dimen/textSize"
+                android:text = "@string/telephone"
+                />
+
+            <TextView
+                android:id = "@+id/telephone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row = "10"
+                android:layout_column="1"
+                android:textSize="@dimen/textSize"
+                android:layout_gravity="fill"
+                />
+
+        </GridLayout>
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+

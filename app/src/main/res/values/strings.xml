@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Belgorod</string>
+    <string name="title_news">News</string>
+    <string name="title_menu">Menu</string>
+    <string name="title_person">Person</string>
+    <string name="title_shop">Shop</string>
+    <string name="balance"> Ваш текущий баланс: </string>
+    <string name ="buy"> Купить </string>
+    <string name="point">баллов</string>
+    <string name = "cash_up">Пополнить</string>
+    <string name="category">КАТЕГОРИИ </string>
+    <string name = "cashback"> Кешбек</string>
+    <string name="cashbak_conditions">условя получения кешбека\nПримерный срок получения:</string>
+
+    <string name="rating">Рейтинг\nпользователя:</string>
+    <string name="cash">Счёт:</string>
+    <string name="about_myself">О себе:</string>
+    <string name="birthday">Дата\nрождения:</string>
+    <string name="city">Город:</string>
+    <string name="achievements">Достижения:</string>
+    <string name="attitude_to_smoking"> Отношения к\nкурению:</string>
+    <string name="attitude_to_alcohol"> Отношение к\nалкоголю:</string>
+    <string name="telephone">Телефон:</string>
+
+</resources>
